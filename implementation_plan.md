@@ -21,7 +21,6 @@
 
 ### 1.2 การวิเคราะห์การพึ่งพาของงาน (Dependency Analysis)
 
-```text
 Week 1          Week 2          Week 3          Week 4
 ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
 │ Architecture│→│ AI & Modules│→│ Integration │→│ Final Demo  │
