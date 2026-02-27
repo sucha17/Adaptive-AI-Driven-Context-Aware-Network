@@ -1,4 +1,4 @@
-# Adaptive AI-Driven Context-Aware Network Architecture Specification
+# Adaptive AI-Driven Context-Aware Network (Architecture Specification)
 **New Network Technology (group8) - CP352005 Networks**
 
 
