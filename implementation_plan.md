@@ -21,16 +21,13 @@
 
 ### 1.2 การวิเคราะห์การพึ่งพาของงาน (Dependency Analysis)
 
-Week 1          Week 2          Week 3          Week 4
-┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
-│ Architecture│→│ AI & Modules│→│ Integration │→│ Final Demo  │
-│ Design      │ │ Implementation│ │ & Testing   │ │ & Delivery  │
-└─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘
-       ↓               ↓               ↓               ↓
-Privacy Spec → Privacy Code → Privacy Test → Integrated
-Routing Spec → Routing Code → Routing Test → Integrated
-Fail-Safe Spec→ Fail-Safe Code→ Fail-Safe Test→ Integrated
-Sim Setup    → Sim Dev      → Sim Test     → Sim Final
+| Week 1 | Week 2 | Week 3 | Week 4 |
+| :--- | :--- | :--- | :--- |
+| **Architecture Design** | **AI & Modules Implementation** | **Integration & Testing** | **Final Demo & Delivery** |
+| Privacy Spec | Privacy Code | Privacy Test | Integrated |
+| Routing Spec | Routing Code | Routing Test | Integrated |
+| Fail-Safe Spec | Fail-Safe Code | Fail-Safe Test | Integrated |
+| Sim Setup | Sim Dev | Sim Test | Sim Final |
 
 **เส้นทางวิกฤต (Critical Path):** AI Routing Implementation → Integration → Testing  
 **งานที่ทำขนานกันได้ (Parallelizable Tasks):** Data Privacy, Fail-Safe System, Documentation
