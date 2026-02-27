@@ -1,5 +1,5 @@
 # Adaptive AI-Driven Context-Aware Network Architecture Specification
-**New Network Technology (g8) - CP352005 Networks**
+**New Network Technology (group8) - CP352005 Networks**
 
 
 ## บทบาทของทีม (Team Roles)
