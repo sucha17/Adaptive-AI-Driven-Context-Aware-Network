@@ -1,5 +1,5 @@
-# แผนการดำเนินงาน (Implementation Plan)
-**โครงการ: Adaptive AI-Driven Context-Aware Network**
+# Adaptive AI-Driven Context-Aware Network (Implementation Plan)
+**New Network Technology (group8) - CP352005 Networks**
 
 ## ส่วนที่ 1: การวิเคราะห์การดำเนินงาน (Implementation Analysis)
 
