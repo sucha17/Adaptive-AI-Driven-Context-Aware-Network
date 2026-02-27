@@ -1,10 +1,6 @@
 # Adaptive AI-Driven Context-Aware Network Architecture Specification
 **New Network Technology (g8) - CP352005 Networks**
 
-## การควบคุมเอกสาร (Document Control)
-| เวอร์ชัน | วันที่ | ผู้จัดทำ | บทบาท | รายละเอียดการแก้ไข |
-|---------|------|--------|------|---------|
-| v2.0 | [27/02/2026] | พิมพ์ลักษณ์ สกุลเจริญกิจ | Architect | ทบทวนสถาปัตยกรรมเบื้องต้น และบูรณาการแนวคิดเครือข่าย AI |
 
 ## บทบาทของทีม (Team Roles)
 | บทบาท | ชื่อ | ความรับผิดชอบ |
