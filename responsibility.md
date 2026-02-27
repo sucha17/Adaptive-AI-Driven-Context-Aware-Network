@@ -82,30 +82,30 @@
 ---
 
 ## 3. Boundaries of Responsibility (In-Scope / Out-of-Scope)
-[cite_start]ขอบเขตการทำงานที่ชัดเจนของแต่ละบทบาท เพื่อป้องกันการทำงานทับซ้อนกัน [cite: 336, 337]
+ขอบเขตการทำงานที่ชัดเจนของแต่ละบทบาท เพื่อป้องกันการทำงานทับซ้อนกัน
 
-### [cite_start]Architect's Boundaries (พลอย) [cite: 338]
-* [cite_start]**In Scope:** ตัดสินใจเรื่องสถาปัตยกรรมระดับระบบ, กำหนดข้อตกลง (Interface) ของทุกเลเยอร์, เลือกโครงสร้างเทคโนโลยี [cite: 339, 340, 341, 342]
-* [cite_start]**Out of Scope:** การเขียนโค้ดแบบบรรทัดต่อบรรทัด, การแก้ไขบั๊กยิบย่อย, การเขียนชุดทดสอบ (Test cases) [cite: 344, 345, 346, 347]
+### Architect's Boundaries (พลอย)
+* **In Scope:** ตัดสินใจเรื่องสถาปัตยกรรมระดับระบบ, กำหนดข้อตกลง (Interface) ของทุกเลเยอร์, เลือกโครงสร้างเทคโนโลยี
+* **Out of Scope:** การเขียนโค้ดแบบบรรทัดต่อบรรทัด, การแก้ไขบั๊กยิบย่อย, การเขียนชุดทดสอบ (Test cases)
 
-### [cite_start]Engineer's Boundaries (พั้น) [cite: 348]
-* [cite_start]**In Scope:** พัฒนาอัลกอริทึมและโค้ดหลักทั้งหมด (AI Routing, Mesh Logic), ปรับปรุงประสิทธิภาพ (Optimization) [cite: 349, 350]
-* [cite_start]**Out of Scope:** การตัดสินใจเปลี่ยนสถาปัตยกรรมหลัก, การดูแล CI/CD Pipeline, กำหนดกลยุทธ์การทดสอบระบบ [cite: 351, 352, 354, 355]
+### Engineer's Boundaries (พั้น)
+* **In Scope:** พัฒนาอัลกอริทึมและโค้ดหลักทั้งหมด (AI Routing, Mesh Logic), ปรับปรุงประสิทธิภาพ (Optimization)
+* **Out of Scope:** การตัดสินใจเปลี่ยนสถาปัตยกรรมหลัก, การดูแล CI/CD Pipeline, กำหนดกลยุทธ์การทดสอบระบบ
 
-### [cite_start]Specialist's Boundaries (แบมบี้) [cite: 356]
-* [cite_start]**In Scope:** กำหนดกฎเกณฑ์ความปลอดภัย, วางลอจิก Emergency Override, ค้นคว้าโมเดลความเป็นส่วนตัว, รวบรวมข้อมูล Edge cases [cite: 357, 358, 360, 361]
-* [cite_start]**Out of Scope:** พัฒนาโค้ดหาเส้นทางหลัก, ตั้งค่าเซิร์ฟเวอร์, เขียนโค้ดระบบอัตโนมัติ (Test automation) [cite: 363, 364, 365, 366]
+### Specialist's Boundaries (แบมบี้)
+* **In Scope:** กำหนดกฎเกณฑ์ความปลอดภัย, วางลอจิก Emergency Override, ค้นคว้าโมเดลความเป็นส่วนตัว, รวบรวมข้อมูล Edge cases
+* **Out of Scope:** พัฒนาโค้ดหาเส้นทางหลัก, ตั้งค่าเซิร์ฟเวอร์, เขียนโค้ดระบบอัตโนมัติ (Test automation)
 
-### [cite_start]DevOps & Tester's Boundaries (ใบยอ) [cite: 368, 380]
-* [cite_start]**In Scope:** ดูแล CI/CD และ Version Control, สร้างสถานการณ์ทดสอบ, ตรวจสอบคุณภาพระบบ (Quality Metrics), ติดตามบั๊ก [cite: 369, 371, 372, 381, 383, 384, 385]
-* [cite_start]**Out of Scope:** ออกแบบอัลกอริทึมหาเส้นทาง, พัฒนาโปรโตคอล, กำหนดนโยบายความเป็นส่วนตัวหลัก [cite: 376, 377, 388, 389, 391]
+### DevOps & Tester's Boundaries (ใบยอ)
+* **In Scope:** ดูแล CI/CD และ Version Control, สร้างสถานการณ์ทดสอบ, ตรวจสอบคุณภาพระบบ (Quality Metrics), ติดตามบั๊ก
+* **Out of Scope:** ออกแบบอัลกอริทึมหาเส้นทาง, พัฒนาโปรโตคอล, กำหนดนโยบายความเป็นส่วนตัวหลัก
 
 ---
 
 
 ## 4. RACI Matrix (Responsible, Accountable, Consulted, Informed)
-[cite_start]ตารางแสดงความรับผิดชอบในแต่ละกิจกรรมหลัก [cite: 399]
-[cite_start]*(R = ผู้ปฏิบัติงาน, A = ผู้รับผิดชอบผลลัพธ์, C = ผู้ให้คำปรึกษา, I = ผู้รับทราบข้อมูล)* [cite: 402, 403, 404, 405]
+ตารางแสดงความรับผิดชอบในแต่ละกิจกรรมหลัก
+*(R = ผู้ปฏิบัติงาน, A = ผู้รับผิดชอบผลลัพธ์, C = ผู้ให้คำปรึกษา, I = ผู้รับทราบข้อมูล)*
 
 | Activity | Architect (พลอย) | Engineer (พั้น) | Specialist (แบมบี้) | DevOps & Tester (ใบยอ) |
 |----------|------------------|-----------------|---------------------|------------------------|
@@ -119,7 +119,7 @@
 ---
 
 ## 5. Critical Handoff Points
-[cite_start]จุดส่งมอบงานสำคัญที่ต้องมีความชัดเจนระหว่างตำแหน่ง [cite: 394]
+จุดส่งมอบงานสำคัญที่ต้องมีความชัดเจนระหว่างตำแหน่ง
 
 | Handoff | From | To | Deliverable | Acceptance Criteria |
 |---------|------|----|-------------|---------------------|
@@ -131,7 +131,7 @@
 ---
 
 ## 6. Role Boundaries Quick Reference Card
-[cite_start]ตารางสรุปแบบกระชับ (Cheat Sheet) เพื่อป้องกันความสับสนในการทำงาน [cite: 407]
+ตารางสรุปแบบกระชับ (Cheat Sheet) เพื่อป้องกันความสับสนในการทำงาน
 
 
 ```text
