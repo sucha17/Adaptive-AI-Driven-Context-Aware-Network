@@ -1,52 +1,89 @@
-# Adaptive-AI-Driven-Context-Aware-Network
-New Network Technology (g8)
-# Adaptive AI-Driven Context-Aware Network Architecture Specification v2.0
-**Architectural Review Document - CP352005 Networks**
+# Adaptive AI-Driven Context-Aware Network Architecture Specification
+**New Network Technology (g8) - CP352005 Networks**
 
-## Document Control
-| Version | Date | Author | Role | Changes |
+## การควบคุมเอกสาร (Document Control)
+| เวอร์ชัน | วันที่ | ผู้จัดทำ | บทบาท | รายละเอียดการแก้ไข |
 |---------|------|--------|------|---------|
-| v2.0 | 2026-02-27 | พิมพ์ลักษณ์ สกุลเจริญกิจ | Architect | Initial architectural review & AI conceptual integration |
+| v2.0 | [ใส่วันที่] | [ชื่อผู้ออกแบบ] | Architect | ทบทวนสถาปัตยกรรมเบื้องต้น |
 
-## Team Roles
-| Role | Name | Responsibilities |
+## บทบาทของทีม (Team Roles)
+| บทบาท | ชื่อ | ความรับผิดชอบ |
 |------|------|------------------|
-| **Architect** | พิมพ์ลักษณ์ สกุลเจริญกิจ (พลอย) | Overall AI network design, core concepts (Self-Aware, Self-Adaptive, User-Centric), system constraints planning |
-| **Engineer** | ทัตพิชา วะสาร (พั้น) | Protocol routing implementation, AI mesh logic development |
-| **Specialist** | ธันยพร เสนาโนฤทธิ์ (แบมบี้) | Data privacy protection, AI error risk management, security layers |
-| **DevOps / Tester** | สุชานาฏ แก้วมุงคุณ (ใบยอ) | Simulation setup, Use Case testing (Campus, Stadium, Emergency), QA |
+| **ผู้ออกแบบ (Architect)** | [ชื่อ] | ออกแบบระบบในภาพรวม, กำหนดชั้นการทำงาน (Layers), กำหนดข้อตกลงการเชื่อมต่อของระบบ |
+| **วิศวกร (Engineer)** | [ชื่อ] | เขียนโค้ดพัฒนาโปรโตคอล, สร้างระบบจำลอง (Simulation) |
+| **ผู้เชี่ยวชาญ (Specialist)** | [ชื่อ] | ศึกษาค้นคว้าด้านมิติเวลา/ฟิสิกส์ควอนตัม, ดูแลการป้องกันความขัดแย้งของเวลา (Paradox prevention) |
+| **ผู้ดูแลระบบ (DevOps)** | [ชื่อ] | เตรียมสภาพแวดล้อมการเขียนโค้ด, ทำ CI/CD, รวบรวมระบบ, จัดทำเอกสาร |
+| **ผู้ทดสอบ (Tester/QA)** | [ชื่อ] | วางแผนการทดสอบ, ตรวจสอบความถูกต้อง, ควบคุมคุณภาพ |
 
 ---
 
-## Part 1: Executive Summary
+## ส่วนที่ 1: บทสรุปผู้บริหาร (Executive Summary)
 
-### 1.1 Project Vision
-The Adaptive AI-Driven Context-Aware Network is an advanced network architecture that utilizes Artificial Intelligence (AI) as its core brain. Unlike traditional networks with static configurations, this architecture dynamically perceives contextual information (user behavior, location, traffic) and self-adapts in real-time. The goal is to optimize bandwidth, reduce latency, and ensure network continuity seamlessly.
+### 1.1 วิสัยทัศน์ของโครงการ
+TS-Com (Trans-Spacetime Communication Network) คือสถาปัตยกรรมเครือข่ายเชิงทฤษฎีที่ขยายแนวคิดจากเครือข่ายแบบเดิมให้สามารถสื่อสารข้ามมิติเวลาได้ โครงการนี้จัดทำขึ้นเพื่อแสดงให้เห็นถึงความเข้าใจในการออกแบบเครือข่ายแบบแบ่งชั้น (Layered network design), โปรโตคอลการหาเส้นทางข้อมูล, รูปแบบการระบุที่อยู่เครือข่าย และความปลอดภัย (ในที่นี้เปรียบเทียบกับการป้องกัน Paradox หรือความขัดแย้งของเวลา) ภายใต้ขอบเขตและข้อจำกัดของโปรเจกต์ระดับปริญญาตรี
 
-### 1.2 Educational Objectives
-- Apply Context-Aware computing concepts to layered network design
-- Design AI-driven routing protocols and dynamic resource allocation
-- Implement network behavior simulations based on real-world constraints
-- Manage constraints such as data privacy, AI processing bottlenecks, and hardware limitations
-- Create comprehensive architectural documentation
+### 1.2 วัตถุประสงค์ทางการศึกษา
+- ประยุกต์ใช้แนวคิด OSI/TCP-IP model กับสถานการณ์จำลองรูปแบบใหม่
+- ออกแบบและกำหนดข้อจำกัดของโปรโตคอลเครือข่าย
+- พัฒนาอัลกอริทึมหาเส้นทาง (Routing) โดยใช้เกณฑ์วัด (Metrics) ที่คิดค้นขึ้นเอง
+- สร้างแบบจำลองระบบเครือข่าย (Network Simulation)
+- ฝึกหัดการเขียนเอกสารสถาปัตยกรรมซอฟต์แวร์
+- ทำความเข้าใจด้านความปลอดภัยของเครือข่าย ผ่านการเปรียบเปรยกับการป้องกันความขัดแย้งของเวลา (Paradox)
 
-### 1.3 Scope and Constraints
-| Aspect | In Scope | Out of Scope |
+### 1.3 ขอบเขตและข้อจำกัด
+| ด้านที่พิจารณา | สิ่งที่ทำ (In Scope) | สิ่งที่ไม่ทำ (Out of Scope) |
 |--------|----------|--------------|
-| **Architecture** | AI-driven traffic management, QoS prioritization | Designing specific physical AI chipsets |
-| **Simulation** | Python/Software-based network simulation | Large-scale physical hardware deployment |
-| **Context** | User behavior, App types, Time, Location | Deep personal tracking outside network scope |
-| **Security** | AI decision fail-safes, privacy anonymization | Comprehensive global threat mitigation |
-| **Testing** | Smart Campus, Smart Stadium, Emergency Cases | Deployment on fully legacy-only infrastructure |
+| **สถาปัตยกรรม** | ออกแบบเลเยอร์แบบแบ่งชั้น, โปรโตคอล, การระบุที่อยู่ | การสร้างชิ้นส่วนฮาร์ดแวร์จริงๆ |
+| **แบบจำลอง** | สร้างแบบจำลองเครือข่ายด้วยภาษา Python | การทดลองกับฮาร์ดแวร์หรือควอนตัมจริงๆ |
+| **มิติเวลา** | นำเสนอในรูปแบบนามธรรม (Abstract) | การประดิษฐ์เครื่องย้อนเวลาจริงๆ |
+| **โปรโตคอล** | ใช้ CAAP, TRP, PPP (ตามทฤษฎีที่คิดขึ้น) | โปรโตคอลที่พร้อมใช้งานในอุตสาหกรรมจริง |
+| **การทดสอบ** | ทดสอบโค้ดย่อย (Unit tests) และทดสอบระบบรวม | การนำไปติดตั้งใช้งานจริงในโลกภายนอก |
 
 ---
 
-## Part 2: Architectural Review
+## ส่วนที่ 2: ทบทวนสถาปัตยกรรม (Architectural Review)
 
-### 2.1 Architecture Overview
-The architecture is built upon three core pillars:
-1. **Self-Aware Network:** Continuously monitors real-time status including traffic volume, latency, node stability, and user context.
-2. **Self-Adaptive Network:** Utilizes Machine Learning algorithms to make autonomous decisions, adjusting routing paths and prioritizing traffic without manual intervention.
-3. **User-Centric Network:** Analyzes "who" is using the network, "what" application is running, and "where/when" it is accessed to provide the highest Quality of Experience (QoE).
+### 2.1 ภาพรวมสถาปัตยกรรม
 
-*(Further layers and protocols to be detailed by the engineering team during Sprint 1 & 2)*
+เพื่อให้เข้าใจการทำงานของ TS-Com สถาปัตยกรรมนี้ได้อ้างอิงและดัดแปลงการทำงานแบบแบ่งชั้นมาจาก OSI Model โดยมีโครงสร้างโปรโตคอลดังนี้:
+
+┌─────────────────────────────────────────────────────────────┐
+│                     TS-Com Protocol Stack                   │
+├─────────────────────────────────────────────────────────────┤
+│  Application Layer    │ มองอนาคต (Future-Sight), กู้คืนอดีต   │
+├─────────────────────────────────────────────────────────────┤
+│  Presentation Layer   │ แสดงผลภาพ AR แห่งเวลา, จัดการข้อมูล    │
+├─────────────────────────────────────────────────────────────┤
+│  Session Layer        │ ซิงค์ไทม์ไลน์ (TSP)                 │
+├─────────────────────────────────────────────────────────────┤
+│  Transport Layer      │ ป้องกันความขัดแย้งของเวลา (PPP)       │
+├─────────────────────────────────────────────────────────────┤
+│  Network Layer        │ การหาเส้นทางข้ามเวลา (TRP)           │
+├─────────────────────────────────────────────────────────────┤
+│  Data Link Layer      │ การระบุจุดยึดเวลา (CAAP)             │
+├─────────────────────────────────────────────────────────────┤
+│  Physical Layer       │ ลิงก์เชื่อมโยงควอนตัม-เวลา (แบบจำลอง)   │
+└─────────────────────────────────────────────────────────────┘
+
+### 2.2 การทบทวนสถาปัตยกรรมทีละชั้น (Layer-by-Layer)
+
+#### 2.2.1 ชั้นกายภาพ - Physical Layer (แบบจำลอง)
+**สถานะการทบทวนการออกแบบ: ✅ อนุมัติ (พร้อมข้อเสนอแนะ)**
+
+| ด้านที่พิจารณา | การประเมิน | ข้อเสนอแนะ (Notes) |
+|--------|------------|-------|
+| **ความสมบูรณ์ (Completeness)** | สูง | มีการกำหนดรูปแบบจำลองไว้ชัดเจน |
+| **ความเป็นไปได้ (Feasibility)** | สูง | สามารถสร้างแบบจำลองด้วย Python ได้จริง |
+| **การทำงานร่วมกัน (Integration)** | ปานกลาง | มีส่วนเชื่อมต่อ (Interface) กับชั้น Data Link ที่ชัดเจน |
+| **นวัตกรรม (Innovation)** | ปานกลาง | มีแนวคิดใหม่ในการใช้ค่า "เวลา" มาเป็นเกณฑ์วัด (Metrics) ของการเชื่อมต่อ |
+
+**ข้อกำหนดส่วนติดต่อ (Interface Definition):**
+```python
+class PhysicalLayer:
+    def transmit(self, packet, source_ca, dest_ca):
+        """ทำการส่งแพ็กเก็ตข้ามผ่านลิงก์แห่งเวลา"""
+        # แบบจำลอง: จะส่งคืนค่าความสำเร็จ/ล้มเหลว พร้อมกับระยะเวลาความหน่วง (Latency)
+        
+    def receive(self, ca_address):
+        """รับแพ็กเก็ตที่จุดยึดเวลา (Chrono-anchor) ปลายทาง"""
+        # แบบจำลอง: จะส่งคืนตัวแพ็กเก็ตข้อมูล หากมีข้อมูลส่งมาถึง
