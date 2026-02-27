@@ -285,22 +285,22 @@
 **Core Implementation Tasks:**
 
 Priority 1 (Must Have):
-├── ContextNodeAddress class
-├── RoutingTable management
-├── AI-Weighted Dijkstra
-├── Packet structure
-└── Basic simulation
+─ ContextNodeAddress class
+─ RoutingTable management
+─ AI-Weighted Dijkstra
+─ Packet structure
+─ Basic simulation
 
 Priority 2 (Should Have):
-├── Route caching (เพื่อลดการประมวลผล AI)
-├── Load balancing (สำหรับ Smart Stadium)
-├── Visualization
-└── Performance optimization
+─ Route caching (เพื่อลดการประมวลผล AI)
+─ Load balancing (สำหรับ Smart Stadium)
+─ Visualization
+─ Performance optimization
 
 Priority 3 (Nice to Have):
-├── โมเดล AI ที่ซับซ้อนและเรียนรู้ได้เอง
-├── Advanced metrics
-└── GUI interface
+─ โมเดล AI ที่ซับซ้อนและเรียนรู้ได้เอง
+─ Advanced metrics
+─ GUI interface
 
 **ความท้าทายทางเทคนิค (Technical Challenges):**
 - การสร้าง AI Routing ที่มีประสิทธิภาพและไม่ทำให้เกิดการประมวลผลล่าช้า (Latency)
