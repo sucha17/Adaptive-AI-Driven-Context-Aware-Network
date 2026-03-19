@@ -141,3 +141,5 @@ for i in range(100):
         st.line_chart(history_df.set_index("Time"))
         
         time.sleep(1)
+        st.write("---") # ขีดเส้นคั่นเพื่อให้ดูเป็นระเบียบ
+        st.write("📌 Current Version: 2.0 (API Ready)")
