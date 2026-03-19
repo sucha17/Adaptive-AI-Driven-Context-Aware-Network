@@ -32,7 +32,43 @@ Adaptive AI-Driven Context-Aware Network คือสถาปัตยกรร
 - **Sprint 3: Privacy, Fail-Safe & Integration (สัปดาห์ที่ 3)** - บูรณาการระบบรักษาความเป็นส่วนตัว ตั้งกฎโหมดฉุกเฉิน (Override) และรวมทุกระบบเข้าด้วยกัน
 - **Sprint 4: Final Testing & Documentation (สัปดาห์ที่ 4)** - รันการทดสอบระบบเต็มรูปแบบตาม Use Cases จำลองการทำงาน และสรุปเอกสารเพื่อนำเสนอ
 
+---
+📘 คู่มือการใช้งานระบบ
+ระบบนี้ถูกออกแบบมาเพื่อทำหน้าที่เป็น Application Plane ในสถาปัตยกรรม Software-Defined Networking (SDN) โดยใช้หลักการ Closed-loop Automation ในการบริหารจัดการเครือข่ายอัตโนมัติ
 
+1. การเลือกสถานการณ์ (Scenario Selection)
+วิธีใช้: ที่แถบด้านซ้าย (Sidebar) ให้เลือกเมนู "เลือกสถานการณ์ (Scenario)"
+
+สิ่งที่เกิดขึ้น: ระบบจะเปลี่ยน Logic การตัดสินใจของ AI ทันที
+
+Smart Campus: โหมดปกติ เน้นการประหยัดทรัพยากร
+
+Smart Stadium: โหมดรองรับผู้ใช้จำนวนมาก AI จะขยาย Bandwidth เพื่อลด Latency
+
+Emergency: โหมดวิกฤต AI จะตัด Bandwidth ส่วนเกินและเพิ่ม Priority (50000) ให้กับหน่วยกู้ภัยโดยเฉพาะ
+
+2. การตรวจสอบชุดคำสั่ง API (Northbound API Analysis)
+ตำแหน่ง: กลางหน้าจอในส่วน "Generated REST API Payload"
+
+มื่อเปลี่ยน Scenario ให้สังเกตว่าค่าในกล่อง JSON จะเปลี่ยนตามแบบ Real-time
+
+ค่า priority จะเปลี่ยนตามความสำคัญของงาน
+
+ค่า action จะเปลี่ยนเป็นคำสั่งควบคุม (เช่น RESERVE_MIN_BANDWIDTH)
+
+คือ ชุดคำสั่งมาตรฐาน RESTCONF ที่ระบบสร้างขึ้นเพื่อส่งไปหา SDN Controller (ONOS) เพื่อแก้ Flow Table ใน Switch จริง
+
+3. การวิเคราะห์ข้อมูลจาก Log จริง (Real-world Log Capture)
+ตำแหน่ง: แถบด้านซ้ายล่างสุด หัวข้อ "Real-world Log Capture"
+
+ข้อมูลในกล่องนี้ไม่ได้มาจากการสุ่ม แต่เป็นการดึงค่าจากไฟล์ network_logs.json ในระบบ
+
+เพื่อโชว์ว่าระบบรองรับการทำ Data Parsing จาก Flow Statistics ของ Switch จริง เพื่อนำมาใช้ประมวลผลร่วมกับ AI
+
+4. ระบบรักษาความเป็นส่วนตัว (Privacy Toggle)
+วิธีใช้: กดเปิดปุ่ม "Enable Data Masking (Anonymization)"
+
+สิ่งที่เกิดขึ้น: ระบบจะจำลองการทำ Data Anonymization เพื่อปกปิดตัวตนของผู้ใช้งานในเครือข่ายก่อนส่งข้อมูลไปวิเคราะห์ที่ Cloud
 ---
 **👥 พัฒนาโดย:** กลุ่มที่ 8 (รายวิชา CP352005 Networks)
 * **Architect:** นางสาวพิมพ์ลักษณ์ สกุลเจริญกิจ (พลอย) 643020630-5
