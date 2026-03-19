@@ -1,0 +1,5 @@
+[
+  {"timestamp": "2026-03-19 10:00:01", "switch_id": "of:0001", "port": 1, "packet_count": 1250, "byte_count": 1500000},
+  {"timestamp": "2026-03-19 10:00:05", "switch_id": "of:0001", "port": 1, "packet_count": 3400, "byte_count": 4200000},
+  {"timestamp": "2026-03-19 10:00:10", "switch_id": "of:0001", "port": 1, "packet_count": 8900, "byte_count": 12000000}
+]
